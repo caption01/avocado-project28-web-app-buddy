@@ -1,26 +1,26 @@
 import React from 'react';
 
-import { Header, Title } from '@/app/components';
+import { Header, Title, Screen } from '@/app/components';
 
 export default function Page() {
   return (
     <div>
-      <section>
+      <Screen className='h-screen'>
         <Header>The Best Avocado Shop</Header>
-      </section>
-      <section>
+      </Screen>
+      <Screen className='h-screen'>
         <Title bold>Avocado everyday.</Title>
         <Title bold>Keep doctor awy</Title>
-      </section>
-      <section>
+      </Screen>
+      <Screen className='h-screen'>
         <Header>Recipe</Header>
-      </section>
-      <section>
+      </Screen>
+      <Screen className='h-screen'>
         <Header>Start Your Plan.</Header>
-      </section>
-      <section>
+      </Screen>
+      <Screen className='h-screen'>
         <Header>Connect with us</Header>
-      </section>
+      </Screen>
     </div>
   );
 }
