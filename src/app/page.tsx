@@ -9,8 +9,8 @@ export default function Page() {
         <Header>The Best Avocado Shop</Header>
       </section>
       <section>
-        <Title>Avocado everyday.</Title>
-        <Title>Keep doctor awy</Title>
+        <Title bold>Avocado everyday.</Title>
+        <Title bold>Keep doctor awy</Title>
       </section>
       <section>
         <Header>Recipe</Header>
