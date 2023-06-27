@@ -1,4 +1,5 @@
+import Header, { HeaderProps } from './Header';
 import Title, { TitleProps } from './Title';
 
-export { Title };
-export type { TitleProps };
+export { Header, Title };
+export type { HeaderProps, TitleProps };

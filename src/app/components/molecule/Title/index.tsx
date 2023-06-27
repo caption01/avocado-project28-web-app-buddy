@@ -7,7 +7,7 @@ interface TitleProps {
 }
 
 const Title = (props: TitleProps) => {
-  return <Text className='text-lg'>{props.children}</Text>;
+  return <Text className='text-5xl'>{props.children}</Text>;
 };
 
 export default Title;
