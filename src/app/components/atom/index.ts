@@ -1,3 +1,4 @@
-const hello = 'a';
+import Text, { TextProps } from './Text';
 
-export { hello };
+export { Text };
+export type { TextProps };

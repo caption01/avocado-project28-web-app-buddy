@@ -1,3 +1,4 @@
-const hello2 = 'a';
+import Title, { TitleProps } from './Title';
 
-export { hello2 };
+export { Title };
+export type { TitleProps };
