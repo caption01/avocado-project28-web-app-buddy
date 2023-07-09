@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, Title, Screen, Button } from '@/app/components';
+import { Header, Title, Screen, Button, Package } from '@/app/components';
 
 export default function Page() {
   return (
@@ -59,12 +59,20 @@ export default function Page() {
             </video>
           </div>
         </div>
-        <div className=''>
-          <Button className='border-2 border-black'>More</Button>
+        <div>
+          <Button className='border-2 border-black'>See more</Button>
         </div>
       </Screen>
-      <Screen className='h-screen'>
-        <Header>Start Your Plan.</Header>
+      <Screen className='h-screen flex flex-col items-center'>
+        <Header className='mb-24'>Start Your Plan.</Header>
+        <div className='flex gap-16 justify-center w-full'>
+          <div className='w-1/3 mx-16'>
+            <Package />
+          </div>
+          <div className='w-1/3 mx-16'>
+            <Package />
+          </div>
+        </div>
       </Screen>
       <Screen className='h-screen'>
         <Header>Connect with us</Header>
