@@ -2,7 +2,7 @@ import { Title } from '@/app/components';
 
 const Footer = () => {
   return (
-    <div className='h-96 w-full bg-gray-200'>
+    <div className='h-72 w-full bg-gray-200'>
       <div className='container mx-auto px-4 h-full'>
         <div className='flex justify-between pt-12 h-full'>
           <div className='w-1/2'>
