@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 import {
@@ -36,14 +37,17 @@ const contacts = [
   {
     icon: '/images/logo-fb.png',
     alt: 'logo-fb',
+    href: 'https://www.facebook.com/avocadoproject28',
   },
   {
     icon: '/images/logo-line.png',
     alt: 'logo-line',
+    href: 'https://lin.ee/FLU4lTu',
   },
   {
     icon: '/images/logo-ig.png',
     alt: 'logo-ig',
+    href: 'https://www.instagram.com/avocadoproject28/',
   },
 ];
 
@@ -128,9 +132,11 @@ export default function Page() {
             <Header className='mb-48'>Contact us</Header>
             <div className='flex w-full h-full justify-evenly'>
               {contacts.map((contact) => (
-                <div key={contact.icon} className='w-48'>
-                  <Contact icon={contact.icon} alt={contact.alt} />
-                </div>
+                <Link key={contact.icon} href={contact.href} target='_blank'>
+                  <div className='w-48'>
+                    <Contact icon={contact.icon} alt={contact.alt} />
+                  </div>
+                </Link>
               ))}
             </div>
           </Screen>
