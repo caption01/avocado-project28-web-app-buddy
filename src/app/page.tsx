@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { Header, Title, Screen, Button, Package } from '@/app/components';
+import {
+  Header,
+  Title,
+  Screen,
+  Button,
+  Package,
+  Contact,
+  Footer,
+} from '@/app/components';
 
 const packages = [
   {
@@ -19,80 +27,106 @@ const packages = [
   },
 ];
 
+const contacts = [
+  {
+    icon: '/images/logo-fb.png',
+    alt: 'logo-fb',
+  },
+  {
+    icon: '/images/logo-line.png',
+    alt: 'logo-line',
+  },
+  {
+    icon: '/images/logo-ig.png',
+    alt: 'logo-ig',
+  },
+];
+
 export default function Page() {
   return (
-    <div className='container mx-auto px-4'>
-      <Screen className='h-screen'>
-        <div className='grid grid-cols-1 grid-rows-1 h-full'>
-          <div className='flex justify-center items-center'>
+    <div>
+      <div className='container mx-auto px-4'>
+        <Screen className='h-screen'>
+          <div className='grid grid-cols-1 grid-rows-1 h-full'>
+            <div className='flex justify-center items-center'>
+              <div>
+                <Header className='mb-4'>The Best</Header>
+                <Header className='mb-12' bold>
+                  Avocado Shop
+                </Header>
+                <Button className='border-2 border-black'>Buy Now</Button>
+              </div>
+            </div>
+          </div>
+        </Screen>
+        <Screen className='h-screen'>
+          <div className='grid grid-cols-1 grid-rows-1 h-full'>
             <div>
-              <Header className='mb-4'>The Best</Header>
-              <Header className='mb-12' bold>
-                Avocado Shop
+              <Header className='mb-4' bold>
+                Avocado everyday
               </Header>
-              <Button className='border-2 border-black'>Buy Now</Button>
+              <Header className='mb-24' bold>
+                Keep doctor awy
+              </Header>
+              <Title className='leading-relaxed mb-24'>
+                Eating avocado every day has numerous health benefits. Avocados
+                are a{' '}
+                <span className='underline underline-offset-2 decoration-4 mr-4'>
+                  great source of healthy fats, fiber, and vitamins.
+                </span>
+                Consuming them regularly can help improve heart health by
+                lowering cholesterol levels and reducing the risk of heart
+                disease.
+              </Title>
+              <Button className='border-2 border-black'>Program</Button>
             </div>
           </div>
-        </div>
-      </Screen>
-      <Screen className='h-screen'>
-        <div className='grid grid-cols-1 grid-rows-1 h-full'>
-          <div>
-            <Header className='mb-4' bold>
-              Avocado everyday
-            </Header>
-            <Header className='mb-24' bold>
-              Keep doctor awy
-            </Header>
-            <Title className='leading-relaxed mb-24'>
-              Eating avocado every day has numerous health benefits. Avocados
-              are a{' '}
-              <span className='underline underline-offset-2 decoration-4 mr-4'>
-                great source of healthy fats, fiber, and vitamins.
-              </span>
-              Consuming them regularly can help improve heart health by lowering
-              cholesterol levels and reducing the risk of heart disease.
-            </Title>
-            <Button className='border-2 border-black'>Program</Button>
-          </div>
-        </div>
-      </Screen>
-      <Screen className='h-screen flex flex-col items-center'>
-        <Header className='mb-24'>Recipe</Header>
-        <div className='grid grid-cols-3 grid-rows-2 w-4/5 h-3/5 gap-8 mx-auto mb-24'>
-          <div className='col-span-2 row-span-2'>
-            <video className='w-full h-full object-fill' controls autoPlay>
-              <source src='/video/avocado-recipe-1.mp4' type='video/mp4' />
-            </video>
-          </div>
-          <div>
-            <video className='w-full h-full object-fill' controls autoPlay>
-              <source src='/video/avocado-recipe-2.mp4' type='video/mp4' />
-            </video>
-          </div>
-          <div>
-            <video className='w-full h-full object-fill' controls autoPlay>
-              <source src='/video/avocado-recipe-3.mp4' type='video/mp4' />
-            </video>
-          </div>
-        </div>
-        <div>
-          <Button className='border-2 border-black'>See more</Button>
-        </div>
-      </Screen>
-      <Screen className='h-screen flex flex-col items-center'>
-        <Header className='mb-24'>Start Your Plan.</Header>
-        <div className='flex gap-16 justify-center w-full'>
-          {packages.map((p) => (
-            <div key={p.title} className='w-1/3 mx-16'>
-              <Package title={p.title} text={p.text} price={p.price} />
+        </Screen>
+        <Screen className='h-screen flex flex-col items-center'>
+          <Header className='mb-24'>Recipe</Header>
+          <div className='grid grid-cols-3 grid-rows-2 w-4/5 h-3/5 gap-8 mx-auto mb-24'>
+            <div className='col-span-2 row-span-2'>
+              <video className='w-full h-full object-fill' controls autoPlay>
+                <source src='/video/avocado-recipe-1.mp4' type='video/mp4' />
+              </video>
             </div>
-          ))}
-        </div>
-      </Screen>
-      <Screen className='h-screen'>
-        <Header>Connect with us</Header>
-      </Screen>
+            <div>
+              <video className='w-full h-full object-fill' controls autoPlay>
+                <source src='/video/avocado-recipe-2.mp4' type='video/mp4' />
+              </video>
+            </div>
+            <div>
+              <video className='w-full h-full object-fill' controls autoPlay>
+                <source src='/video/avocado-recipe-3.mp4' type='video/mp4' />
+              </video>
+            </div>
+          </div>
+          <div>
+            <Button className='border-2 border-black'>See more</Button>
+          </div>
+        </Screen>
+        <Screen className='h-screen flex flex-col items-center'>
+          <Header className='mb-24'>Start Your Plan.</Header>
+          <div className='flex gap-16 justify-center w-full'>
+            {packages.map((p) => (
+              <div key={p.title} className='w-1/3 mx-16'>
+                <Package title={p.title} text={p.text} price={p.price} />
+              </div>
+            ))}
+          </div>
+        </Screen>
+        <Screen className='mb-48'>
+          <Header className='mb-48'>Contact us</Header>
+          <div className='flex w-full h-full justify-evenly'>
+            {contacts.map((contact) => (
+              <div key={contact.icon} className='w-48'>
+                <Contact icon={contact.icon} alt={contact.alt} />
+              </div>
+            ))}
+          </div>
+        </Screen>
+      </div>
+      <Footer />
     </div>
   );
 }
