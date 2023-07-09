@@ -6,7 +6,14 @@ export default function Page() {
   return (
     <div>
       <Screen className='h-screen'>
-        <Header>The Best Avocado Shop</Header>
+        <div className='grid grid-cols-1 grid-rows-1 h-full'>
+          <div className='flex justify-center items-center'>
+            <div>
+              <Header className='mb-4'>The Best</Header>
+              <Header bold>Avocado Shop</Header>
+            </div>
+          </div>
+        </div>
       </Screen>
       <Screen className='h-screen'>
         <Title bold>Avocado everyday.</Title>
