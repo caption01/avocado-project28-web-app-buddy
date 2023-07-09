@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, Title, Screen } from '@/app/components';
+import { Header, Title, Screen, Button } from '@/app/components';
 
 export default function Page() {
   return (
@@ -10,7 +10,10 @@ export default function Page() {
           <div className='flex justify-center items-center'>
             <div>
               <Header className='mb-4'>The Best</Header>
-              <Header bold>Avocado Shop</Header>
+              <Header className='mb-4' bold>
+                Avocado Shop
+              </Header>
+              <Button className='bg-gray-500'>Buy Now</Button>
             </div>
           </div>
         </div>
