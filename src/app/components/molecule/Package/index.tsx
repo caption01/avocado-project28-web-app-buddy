@@ -1,15 +1,24 @@
 import { Title } from '@/app/components';
 
-const Package = () => {
+type PackageProps = {
+  title: string;
+  text: string[];
+  price: string;
+};
+
+const Package = (props: PackageProps) => {
+  const { title, text = [], price } = props;
+  const [f, s, t] = text;
+
   return (
     <div className='bg-gray-100 w-full p-16  text-center rounded-tr-[7.5rem] rounded-bl-[7.5rem]'>
       <Title className='mb-32' bold>
-        Starter package
+        {title}
       </Title>
-      <Title className='text-3xl'>pay for single order</Title>
-      <Title className='text-3xl mb-16'>(6 pieces / 1 box)</Title>
-      <Title className='text-3xl mb-32'>receive 1 package</Title>
-      <Title bold>799 Baht</Title>
+      <Title className='text-3xl'>{f}</Title>
+      <Title className='text-3xl mb-16'>{s}</Title>
+      <Title className='text-3xl mb-32'>{t}</Title>
+      <Title bold>{price}</Title>
     </div>
   );
 };

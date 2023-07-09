@@ -2,6 +2,23 @@ import React from 'react';
 
 import { Header, Title, Screen, Button, Package } from '@/app/components';
 
+const packages = [
+  {
+    title: 'Starter package',
+    text: ['pay for single order', '(6 pieces / 1 box)', 'receive 1 package'],
+    price: '799 Baht',
+  },
+  {
+    title: 'Avocado lover',
+    text: [
+      'pay for monthly order',
+      '(6 pieces / 1 box)',
+      'receive  1 package / week',
+    ],
+    price: '2999 Baht',
+  },
+];
+
 export default function Page() {
   return (
     <div className='container mx-auto px-4'>
@@ -66,12 +83,11 @@ export default function Page() {
       <Screen className='h-screen flex flex-col items-center'>
         <Header className='mb-24'>Start Your Plan.</Header>
         <div className='flex gap-16 justify-center w-full'>
-          <div className='w-1/3 mx-16'>
-            <Package />
-          </div>
-          <div className='w-1/3 mx-16'>
-            <Package />
-          </div>
+          {packages.map((p) => (
+            <div key={p.title} className='w-1/3 mx-16'>
+              <Package title={p.title} text={p.text} price={p.price} />
+            </div>
+          ))}
         </div>
       </Screen>
       <Screen className='h-screen'>
