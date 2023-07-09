@@ -13,15 +13,16 @@ import {
 const packages = [
   {
     title: 'Starter package',
-    text: ['pay for single order', '(6 pieces / 1 box)', 'receive 1 package'],
+    text: ['for single order', '(6 pieces / 1 box)', 'receive', '1 package'],
     price: '799 Baht',
   },
   {
     title: 'Avocado lover',
     text: [
-      'pay for monthly order',
+      'for monthly order',
       '(6 pieces / 1 box)',
-      'receive  1 package / week',
+      'receive',
+      '1 package / week',
     ],
     price: '2999 Baht',
   },

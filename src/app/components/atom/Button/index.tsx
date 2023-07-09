@@ -12,7 +12,7 @@ const Button = (props: ButtonProps) => {
     'py-4',
     'rounded-full',
     'border-black',
-    'text-2xl',
+    'text-3xl',
     props.className,
   );
 
