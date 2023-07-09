@@ -109,17 +109,32 @@ export default function Page() {
           <Header className='mb-24'>Recipe</Header>
           <div className='grid grid-cols-3 grid-rows-2 w-4/5 h-3/5 gap-8 mx-auto mb-24'>
             <div className='col-span-2 row-span-2'>
-              <video className='w-full h-full object-fill' controls autoPlay>
+              <video
+                className='w-full h-full object-fill'
+                controls
+                autoPlay
+                loop
+              >
                 <source src='/video/avocado-recipe-1.mp4' type='video/mp4' />
               </video>
             </div>
             <div>
-              <video className='w-full h-full object-fill' controls autoPlay>
+              <video
+                className='w-full h-full object-fill'
+                controls
+                autoPlay
+                loop
+              >
                 <source src='/video/avocado-recipe-2.mp4' type='video/mp4' />
               </video>
             </div>
             <div>
-              <video className='w-full h-full object-fill' controls autoPlay>
+              <video
+                className='w-full h-full object-fill'
+                controls
+                autoPlay
+                loop
+              >
                 <source src='/video/avocado-recipe-3.mp4' type='video/mp4' />
               </video>
             </div>
