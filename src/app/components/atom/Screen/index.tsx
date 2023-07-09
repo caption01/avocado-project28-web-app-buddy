@@ -6,7 +6,9 @@ interface ScreenProps {
 }
 
 const Screen = (props: ScreenProps) => {
-  return <section className={props.className}>{props.children}</section>;
+  return (
+    <section className={`px-48 ${props.className}`}>{props.children}</section>
+  );
 };
 
 export default Screen;
