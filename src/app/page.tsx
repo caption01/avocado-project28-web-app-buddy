@@ -51,11 +51,6 @@ const contacts = [
   },
 ];
 
-const bgGradient = {
-  green: '#d7f444',
-  white: '#ffffff',
-};
-
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView();
 };
@@ -65,7 +60,7 @@ export default function Page() {
     <ParallaxProvider>
       <div>
         <Screen
-          className={`h-screen bg-gradient-to-b from-[${bgGradient.green}] from-30% to-[${bgGradient.white}] to-70%`}
+          className={`h-screen bg-gradient-to-b from-[#d7f444] from-30% to-[#ffffff] to-70%`}
         >
           <div className='grid grid-cols-1 grid-rows-1 h-full'>
             <div className='flex flex-col justify-center items-center'>
@@ -78,14 +73,14 @@ export default function Page() {
           </div>
         </Screen>
         <Screen
-          className={`h-full w-full bg-gradient-to-t from-[${bgGradient.green}] from-30% to-[${bgGradient.white}] to-70%`}
+          className={`h-full w-full bg-gradient-to-t from-[#d7f444] from-30% to-[#ffffff] to-70%`}
         >
           <div className={`flex w-full justify-center`}>
             <AvocadoParallax />
           </div>
         </Screen>
         <Screen
-          className={`h-screen bg-gradient-to-b from-[${bgGradient.green}] from-30% to-[${bgGradient.white}] to-70%`}
+          className={`h-screen bg-gradient-to-b from-[#d7f444] from-30% to-[#ffffff] to-70%`}
         >
           <div className='grid grid-cols-1 grid-rows-1 h-full'>
             <div>
@@ -149,7 +144,7 @@ export default function Page() {
         </Screen>
         <Screen
           id='package'
-          className={`h-screen flex flex-col items-center bg-gradient-to-t from-[${bgGradient.green}] from-30% to-[${bgGradient.white}] to-70%`}
+          className={`h-screen flex flex-col items-center bg-gradient-to-t from-[#d7f444] from-30% to-[#ffffff] to-70%`}
         >
           <Header className='mb-24'>Start Your Plan.</Header>
           <div className='flex gap-16 justify-center w-full'>
@@ -162,7 +157,7 @@ export default function Page() {
         </Screen>
         <Screen
           id={'contract'}
-          className={`pb-48 bg-gradient-to-b from-[${bgGradient.green}] from-30% to-[${bgGradient.white}] to-70%`}
+          className={`pb-48 bg-gradient-to-b from-[#d7f444] from-30% to-[#ffffff] to-70%`}
         >
           <Header className='mb-48'>Contact us</Header>
           <div className='flex w-full h-full justify-evenly'>
