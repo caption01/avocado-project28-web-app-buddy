@@ -56,6 +56,10 @@ const bgGradient = {
   white: '#ffffff',
 };
 
+const scrollTo = (id: string) => {
+  document.getElementById(id)?.scrollIntoView();
+};
+
 export default function Page() {
   return (
     <ParallaxProvider>
@@ -69,7 +73,7 @@ export default function Page() {
               <Header className='mb-24' bold>
                 Avocado Shop
               </Header>
-              <Button className='border-2 border-black'>Buy Now</Button>
+              <Button onClick={() => scrollTo('contract')}>Buy Now</Button>
             </div>
           </div>
         </Screen>
@@ -101,7 +105,7 @@ export default function Page() {
                 lowering cholesterol levels and reducing the risk of heart
                 disease.
               </Title>
-              <Button className='border-2 border-black'>Program</Button>
+              <Button onClick={() => scrollTo('package')}>Program</Button>
             </div>
           </div>
         </Screen>
@@ -140,10 +144,11 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <Button className='border-2 border-black'>See more</Button>
+            <Button onClick={() => scrollTo('contract')}>See more</Button>
           </div>
         </Screen>
         <Screen
+          id='package'
           className={`h-screen flex flex-col items-center bg-gradient-to-t from-[${bgGradient.green}] from-30% to-[${bgGradient.white}] to-70%`}
         >
           <Header className='mb-24'>Start Your Plan.</Header>
@@ -156,6 +161,7 @@ export default function Page() {
           </div>
         </Screen>
         <Screen
+          id={'contract'}
           className={`pb-48 bg-gradient-to-b from-[${bgGradient.green}] from-30% to-[${bgGradient.white}] to-70%`}
         >
           <Header className='mb-48'>Contact us</Header>

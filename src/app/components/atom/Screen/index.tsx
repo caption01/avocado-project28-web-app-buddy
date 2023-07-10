@@ -1,13 +1,16 @@
 import { ReactNode } from 'react';
 
 interface ScreenProps {
+  id?: string;
   className?: string;
   children: ReactNode;
 }
 
 const Screen = (props: ScreenProps) => {
   return (
-    <section className={`px-48 ${props.className}`}>{props.children}</section>
+    <section id={props.id} className={`px-48 ${props.className}`}>
+      {props.children}
+    </section>
   );
 };
 

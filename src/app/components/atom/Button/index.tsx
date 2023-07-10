@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 interface ButtonProps {
   className?: string;
   children: ReactNode;
+  onClick: () => void;
 }
 
 const Button = (props: ButtonProps) => {
@@ -13,10 +14,18 @@ const Button = (props: ButtonProps) => {
     'rounded-full',
     'border-black',
     'text-3xl',
+    'border-2',
+    'border-black',
+    'bg-white',
+    'cursor-pointer',
     props.className,
   );
 
-  return <button className={btnClass}>{props.children}</button>;
+  return (
+    <button className={btnClass} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;
