@@ -88,7 +88,7 @@ export default function Page() {
                 Avocado everyday
               </Header>
               <Header className='mb-24' bold>
-                Keep doctor awy
+                Keep doctor away
               </Header>
               <Title className='leading-relaxed mb-24'>
                 Eating avocado every day has numerous health benefits. Avocados
@@ -105,7 +105,9 @@ export default function Page() {
           </div>
         </Screen>
         <Screen className='h-screen flex flex-col items-center'>
-          <Header className='mb-24'>Recipe</Header>
+          <Header className='mb-24' bold>
+            Recipe
+          </Header>
           <div className='grid grid-cols-3 grid-rows-2 w-4/5 h-3/5 gap-8 mx-auto mb-24'>
             <div className='col-span-2 row-span-2'>
               <video
@@ -146,7 +148,9 @@ export default function Page() {
           id='package'
           className={`h-screen flex flex-col items-center bg-gradient-to-t from-[#d7f444] from-30% to-[#ffffff] to-70%`}
         >
-          <Header className='mb-24'>Start Your Plan.</Header>
+          <Header className='mb-24' bold>
+            Start Your Plan.
+          </Header>
           <div className='flex gap-16 justify-center w-full'>
             {packages.map((p) => (
               <div key={p.title} className='w-1/3 mx-16'>
@@ -159,7 +163,9 @@ export default function Page() {
           id={'contract'}
           className={`pb-48 bg-gradient-to-b from-[#d7f444] from-30% to-[#ffffff] to-70%`}
         >
-          <Header className='mb-48'>Contact us</Header>
+          <Header className='mb-48' bold>
+            Contact us
+          </Header>
           <div className='flex w-full h-full justify-evenly'>
             {contacts.map((contact) => (
               <Link key={contact.icon} href={contact.href} target='_blank'>

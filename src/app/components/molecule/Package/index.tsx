@@ -11,7 +11,7 @@ const Package = (props: PackageProps) => {
   const [f, s, t, fo] = text;
 
   return (
-    <div className='bg-gray-100 w-full p-16  text-center rounded-tr-[7.5rem] rounded-bl-[7.5rem]'>
+    <div className='bg-white w-full p-16 border-4 border-black  text-center rounded-tr-[7.5rem] rounded-bl-[7.5rem] max-w-2xl'>
       <Title className='mb-32' bold>
         {title}
       </Title>
